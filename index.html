@@ -335,12 +335,16 @@
     
     function menuIcon() {
         if (menuList.style.right == "-315px") {
-               menuList.style.right = "0px";
-    
+               menuList.style.display = "block";
+               setTimeout(() => {
+                menuList.style.right = "0px";
+               }, 50);
     
         } else {
     menuList.style.right = "-315px";
-    
+    setTimeout(() => {
+        menuList.style.display = "none";
+    }, 400);
         }
     }
     </script>
